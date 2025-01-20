@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+<style>
+    .centerpos{
+        text-align: center;
+    }
+</style>
+{% block content %}
+    <h1 class="centerpos">Главная страница</h1>
+    {% for el in tasks %}
+        <div>
+            <h3 class="centerpos">{{ el.title }}</h3>
+            <p class="centerpos">{{el.task}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
